@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('admin/job/add', 'Admin\JobController@add');
+
+Route::get('admin/job/create', 'Admin\JobController@create');
